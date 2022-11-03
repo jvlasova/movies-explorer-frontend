@@ -1,0 +1,32 @@
+.movies__more {
+  min-height: 166px;
+  display: flex;
+  align-items: center;
+}
+
+.movies__button-more {
+  margin: 0 70px;
+  width: 100%;
+  min-height: 36px;
+  border: 0;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  color:rgba(0, 0, 0, 1);
+  text-align: center;
+  background: rgba(249, 249, 249, 1);
+  transition: opacity .4s ease-in-out;
+}
+
+.movies__button-more:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+@media screen and (max-width: 767px) {
+  .movies__button-more {
+    margin: 0 10px;
+  }
+}

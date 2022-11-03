@@ -1,0 +1,134 @@
+.aboutProject {
+  min-height: 608px;
+  margin: 0 70px;
+}
+
+.aboutProject__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.16;
+  color: rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 1);;
+  padding: 110px 0 23px;
+  margin: 0;
+}
+
+.aboutProject__two-columns {
+  min-width: 608px;
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.aboutProject__subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.21;
+  color: rgba(0, 0, 0, 1);
+  padding-top: 70px;
+}
+
+.aboutProject__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 1);
+  padding: 26px 0 0;
+}
+
+.aboutProject__container {
+  min-width: 1140px;
+  display: grid;
+  grid-template-columns: minmax(228px, 1fr) minmax(912px, 1fr);
+  list-style: none;
+  padding: 110px 0;
+}
+
+.aboutProject__one-week {
+  max-height: 35px;
+  padding: 9px 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  background: rgba(43, 224, 128, 1);
+}
+
+.aboutProject__four-week {
+  max-height: 35px;
+  padding: 9px 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  background: rgba(232, 232, 232, 1);
+  ;
+}
+
+.aboutProject__text-development {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(139, 139, 139, 1);
+  text-align: center;
+  padding: 23px 0 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .aboutProject {
+    margin: 0 50px;
+  }
+
+  .aboutProject__container {
+    min-width: 668px;
+    grid-template-columns: minmax(140px, 1fr) minmax(528px, 1fr);
+    padding: 93px 0 90px;
+  }
+}
+
+@media screen and (max-width: 619px) {
+  .aboutProject {
+    margin: 0 18px;
+  }
+
+  .aboutProject__title {
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 70px 0 28px;
+  }
+
+  .aboutProject__two-columns {
+    min-width: 284px;
+    display: block;
+  }
+
+  .aboutProject__subtitle {
+    font-size: 18px;
+    line-height: 1.2;
+    padding-top: 60px;
+  }
+  
+  .aboutProject__text {
+    font-size: 11px;
+    line-height: 1.45;
+    padding: 16px 0 0;
+  }
+
+  .aboutProject__container {
+    min-width: 284px;
+    grid-template-columns: minmax(100px, 1fr) minmax(184px, 1fr);
+    padding: 60px 0 69px;
+  }
+}

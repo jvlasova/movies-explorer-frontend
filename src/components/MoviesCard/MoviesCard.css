@@ -1,0 +1,49 @@
+.movies-card {
+  max-width: 270px;
+}
+
+.movies__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px 0 29px;
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+}
+
+.image__movies {
+  width: 100%;
+  object-fit: cover;
+}
+
+.movies__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  color:rgba(0, 0, 0, 1);
+}
+
+.movies__delete-button {
+  max-width: 24px;
+  transition: opacity .4s ease-in-out;
+}
+
+.movies__delete-button:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+.movies__duration{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.2;
+  color: rgba(160, 160, 160, 1);
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 1023px) {
+  .movies-card {
+    max-width: 339px;
+  }
+}
