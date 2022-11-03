@@ -1,11 +1,5 @@
-.header {
-  max-height: 74px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .header__container {
+  min-height: 74px;
   background-color: rgba(7, 48, 66, 1);
   display: flex;
   justify-content: space-between;
@@ -14,8 +8,8 @@
 }
 
 .header__account {
+  min-height: 74px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 70px;
 }

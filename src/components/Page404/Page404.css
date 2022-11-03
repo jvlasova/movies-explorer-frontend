@@ -9,8 +9,8 @@
   font-weight: 400;
   font-size: 140px;
   line-height: 1.2;
-  color:rgba(0, 0, 0, 1);
-  margin-top: 246px;
+  color: rgba(255, 255, 255, 1);
+  margin: 246px 0 0;
 }
 
 .page404__text {
@@ -18,8 +18,8 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
-  color:rgba(0, 0, 0, 1);
-  margin-top: 5px;
+  color: rgba(255, 255, 255, 1);
+  margin: 5px 0 0;
 }
 
 .page404__link {

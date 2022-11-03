@@ -49,7 +49,7 @@ function Register() {
         maxLength='30'
       />
       <span className='input-text-error'>
-        Что-то пошдо не так
+        Что-то пошдо не так...
       </span>
     </Form>
   );

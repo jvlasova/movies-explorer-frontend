@@ -8,8 +8,8 @@
   font-weight: 400;
   font-size: 22px;
   line-height: 1.16;
-  color: rgba(0, 0, 0, 1);
-  border-bottom: 1px solid rgba(0, 0, 0, 1);;
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
   padding: 110px 0 23px;
   margin: 0;
 }
@@ -28,7 +28,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 1.21;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
   padding-top: 70px;
 }
 
@@ -37,7 +37,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
   padding: 26px 0 0;
 }
 
@@ -57,7 +57,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
   text-align: center;
   background: rgba(43, 224, 128, 1);
 }

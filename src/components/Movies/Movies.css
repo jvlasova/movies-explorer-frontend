@@ -1,12 +1,11 @@
 .movies__more {
   min-height: 166px;
   display: flex;
-  align-items: center;
 }
 
 .movies__button-more {
-  margin: 0 70px;
-  width: 100%;
+  margin: auto;
+  width: 320px;
   min-height: 36px;
   border: 0;
   border-radius: 5px;
@@ -14,9 +13,10 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.25;
-  color:rgba(0, 0, 0, 1);
+  border: 1px solid  rgba(139, 139, 139, 1);
+  background: rgba(32, 32, 32, 1);
+  color: rgba(255, 255, 255, 1);
   text-align: center;
-  background: rgba(249, 249, 249, 1);
   transition: opacity .4s ease-in-out;
 }
 
@@ -27,6 +27,6 @@
 
 @media screen and (max-width: 767px) {
   .movies__button-more {
-    margin: 0 10px;
+    width: 240px;
   }
 }

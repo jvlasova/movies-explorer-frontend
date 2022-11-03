@@ -20,22 +20,21 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
-  color:rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .auth__input {
   min-width: 381px;
-  min-height: 46px;
   margin: 0 auto 20px;
   border-style: none;
-  background: rgba(249, 249, 249, 1);
-  border-radius: 8px;
+  background: rgba(32, 32, 32, 1);
+  border-bottom: 1px solid rgba(66, 66, 66, 1);
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 1.2;
-  color:rgba(0, 0, 0, 1);
-  padding: 0 0 0 15px;
+  color: rgba(255, 255, 255, 1);
+  padding: 0 0 10px 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -59,7 +58,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
-  color: rgba(160, 160, 160, 1);
+  color: rgba(139, 139, 139, 1);
   text-align: center;
   margin: 16px 0;
 }

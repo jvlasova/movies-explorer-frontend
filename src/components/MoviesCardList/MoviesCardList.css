@@ -17,7 +17,7 @@
 @media screen and (max-width: 767px) {
   .moviescard__list {
     max-width: 320px;
-    margin: 0 10px;
+    margin: 40px 10px 0;
     grid-template-columns: repeat(1, 1fr);
     gap: 34px;
   }

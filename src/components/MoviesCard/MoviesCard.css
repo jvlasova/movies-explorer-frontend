@@ -1,18 +1,20 @@
 .movies-card {
   max-width: 270px;
+  border-radius: 10px;
+  background: rgba(34, 34, 34, 1);
 }
 
 .movies__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 14px 0 29px;
-  border-bottom: 1px solid rgba(232, 232, 232, 1);
+  margin: 14px 12px 0;
 }
 
 .image__movies {
   width: 100%;
   object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
 .movies__title {
@@ -20,7 +22,8 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 1.2;
-  color:rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
 }
 
 .movies__delete-button {
@@ -38,8 +41,8 @@
   font-weight: 400;
   font-size: 11px;
   line-height: 1.2;
-  color: rgba(160, 160, 160, 1);
-  margin-top: 6px;
+  color: rgba(139, 139, 139, 1);
+  margin: 10px 12px 14px;
 }
 
 @media screen and (max-width: 1023px) {
