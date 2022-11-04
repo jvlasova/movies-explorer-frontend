@@ -1,19 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Form from '../Form/Form';
 import Logo from '../Logo/Logo';
 
 function Login() {
   return (
-    <Form 
-      name='form' 
-      button='Войти' 
-      text='Ещё не зарегистрированы?' 
-      link='Регистрация'
-    >
+    <Form name='login'>
       <Logo />
       <h1 className='auth__title'>Рады видеть!</h1>
       <p className='auth__input-label'>
-       Email
+        Email
       </p>
       <input
         className='auth__input'
@@ -36,6 +32,21 @@ function Login() {
         minLength='2'
         maxLength='30'
       />
+      <div className='auth__container'>
+        <button 
+          type='submit' 
+          className='auth__register-button'
+          aria-label='Авторизироваться'
+        >  
+          Войти
+        </button>
+        <p className='auth__text'>
+          Ещё не зарегистрированы?
+        <Link to='./signup' className='auth__link'>
+          Регистрация
+        </Link>
+        </p>
+      </div>
     </Form>
   );
 };

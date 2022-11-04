@@ -10,6 +10,7 @@
 .form-seach__container {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   border: 0;
 }
 
@@ -41,6 +42,7 @@
   min-width: 34px;
 }
 
+
 .form-seach__toggle {
   display: flex;
   align-items: center;
@@ -57,18 +59,14 @@
 }
 
 .toggle {
-  position: relative;
-  display: flex;
-  align-items: center;
   min-width: 16px;
   min-height: 16px;
   border-radius: 20px;
-  padding: 2px;
   background: rgba(43, 224, 128, 1);
   border: 0;
 }
 
-.toggle__turn:hover {
+.toggle:hover {
   cursor: pointer;
   opacity: .5;
 }
@@ -81,18 +79,20 @@
 
 @media screen and (max-width: 1023px) {
   .form-seach {
-    max-height: 226px;
+    min-height: 246px;
     margin: 0 10px;
   }
+
+  .form-seach__toggle {
+    flex-direction: row-reverse;
+  }
+
 }
 
 @media screen and (max-width: 767px) {
   .form-seach {
     margin: 0 10px;
-  }
-
-  .header__account {
-    padding: 0 14px;
+    min-height: 248px;
   }
 
   .form-seach__container {

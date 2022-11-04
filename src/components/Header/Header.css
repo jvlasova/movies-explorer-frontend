@@ -11,7 +11,7 @@
   min-height: 74px;
   display: flex;
   align-items: center;
-  padding: 0 70px;
+  margin: 0 70px;
 }
 
 .header__sign {
@@ -65,26 +65,17 @@
   }
 
   .header__account {
-    padding: 0 30px;
-    margin-top: 18px;
+    margin: 0 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-  }
-
   .header__container {
     padding: 0 14px;
-    height: 74px;
   }
 
   .header__account {
-    padding: 0 14px;
+    margin: 0 14px;
   }
 
   .header__link {

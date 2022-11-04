@@ -1,15 +1,23 @@
-.hamburgerer {
+.hamburger {
   max-width: 38px;
+  position: absolute;
+  right: 10px;
   transition: opacity .4s ease-in-out;
 }
 
-.hamburgerer:hover {
+.hamburger:hover {
   cursor: pointer;
   opacity: .5;
 }
 
 @media (min-width: 1023px) {
-  .hamburgerer {
+  .hamburger {
     display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .hamburger {
+    right: 30px;
   }
 }

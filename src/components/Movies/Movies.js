@@ -1,7 +1,7 @@
 import './Movies.css';
 import Header from '../Header/Header';
 import SeachForm from '../SeachForm/SeachForm';
-import Preloder from '../Preloader/Preloader';
+//import Preloder from '../Preloader/Preloader';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
 
@@ -10,9 +10,9 @@ function Movies() {
     <>
       <Header />
       <SeachForm />
-      <div className='preloader'>
+      {/* <div className='preloader'>
         <Preloder />
-      </div>
+      </div> */}
       <section className='movies'>
         <MoviesCardList />
       </section>

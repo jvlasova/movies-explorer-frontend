@@ -1,5 +1,5 @@
 import './SeachForm.css';
-import seach from '../../images/seach/seach.svg'
+import seach_blue from '../../images/seach/seach_blue.svg'
 import seach_grey from '../../images/seach/seach_grey.svg'
 
 function SeachForm() {
@@ -24,7 +24,7 @@ function SeachForm() {
           aria-label='Поиск'
           className='form-seach__button'
         >
-          <img className='form-seach__image' src={seach} alt='Seach' />
+          <img className='form-seach__image' src={seach_blue} alt='Seach' />
         </button>
       </div>
       <div className='form-seach__border'></div>
@@ -35,7 +35,6 @@ function SeachForm() {
           aria-label='Поиск корометражек'
           className='toggle'
         >
-        <div className='toggle__turn'></div>
         </button>
       </div>
     </form>

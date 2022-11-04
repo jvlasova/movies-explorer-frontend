@@ -32,14 +32,14 @@ function Profile() {
           aria-label='Редактировать'
           className='form__edit'
       >
-          Редактировать
+        Редактировать
       </button>
       <button
           type='button'
           aria-label='Выйти из аккаунта'
           className='form__logout'
       >
-          Выйти из аккаунта
+        Выйти из аккаунта
       </button>
       </div>
     </section>
