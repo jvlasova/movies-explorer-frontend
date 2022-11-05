@@ -4,7 +4,7 @@ import './Form.css';
 function Form({ children }) {
   return (
     <fieldset className='auth'>
-      <form name='form' className='auth__container'>
+      <form name='form'>
         {children}
       </form>
     </fieldset>

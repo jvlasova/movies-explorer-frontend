@@ -6,18 +6,13 @@ function SeachForm() {
   return (
     <form className='form-seach'>
       <div className='form-seach__container'>
-      <button 
-          type='button'
-          aria-label='Поиск'
-          className='form-seach__button'
-        >
-          <img className='form-seach__image' src={seach_grey} alt='Seach' />
-        </button>
+        <img className='form-seach__image' src={seach_grey} alt='Seach' />
         <input
           className='form-seach__input'
           name='seach'
           type='seach'
           placeholder='Фильм'
+          required
         />
         <button 
           type='button'

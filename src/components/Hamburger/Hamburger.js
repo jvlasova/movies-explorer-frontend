@@ -1,11 +1,17 @@
 import './Hamburger.css';
-import hamburger from '../../images/header/hamburger.svg';
 
-function Hamburger() {
+function Hamburger(props) {
+  const {
+    onHandleHamburger
+  } = props;
+
   return (
-    <div className='hamburger' to='/'>
-      <img src={hamburger} alt='Логотип' />
-    </div>
+     <button
+      type='button'
+      className='hamburger'
+      onClick={onHandleHamburger}
+     >
+    </button>
   );
 }
 

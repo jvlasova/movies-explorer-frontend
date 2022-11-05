@@ -1,13 +1,23 @@
 .hamburger {
-  max-width: 38px;
+  width: 40px;
+  height: 43px;
   position: absolute;
   right: 10px;
   transition: opacity .4s ease-in-out;
+  border: 0;
+  background: url('../../images/header/hamburger.svg');
 }
 
 .hamburger:hover {
   cursor: pointer;
   opacity: .5;
+}
+
+.hamburger__image {
+  max-width: 40px;
+  max-height: 43px;
+  background: none;
+  border: 0;
 }
 
 @media (min-width: 1023px) {

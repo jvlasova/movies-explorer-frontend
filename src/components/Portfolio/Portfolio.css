@@ -19,8 +19,15 @@
 .portfolio__link {
   display: flex;
   justify-content: space-between;
-  transition: opacity .4s ease-in-out;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
   margin: 15px 0 0;
+  background: url('../../images/portfolio/arrow.svg') no-repeat right;
+  transition: opacity .4s ease-in-out;
 }
 
 .portfolio__link:hover {
@@ -53,9 +60,18 @@
   .portfolio {
     margin: 0 50px;
   }
+
+  .portfolio__container {
+    margin: 0 0 90px;
+  }
+
+  .portfolio__link {
+    font-size: 28px;
+    line-height: 1.8;
+  }
 }
 
-@media screen and (max-width: 619px) {
+@media screen and (max-width: 767px) {
   .portfolio {
     margin: 0 18px;
     padding: 0;
@@ -74,14 +90,12 @@
 
   .portfolio__link {
     margin: 20px 0 0;
-  }
-  
-  .portfolio__heading {
     font-size: 18px;
     line-height: 1.5;
+    background-size: 12px;
   }
 
-  .portfolio__image {
-    max-width: 12px;
+  .portfolio__line {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
   }
 }

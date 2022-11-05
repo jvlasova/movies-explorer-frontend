@@ -1,5 +1,5 @@
 .promo {
-  max-height: 590px;
+  min-height: 590px;
 }
 
 .promo__container {
@@ -8,10 +8,9 @@
   flex-direction: column;
   align-items: center;
   background-color: rgba(7, 48, 66, 1);
-  user-select: none;
 }
 
-.landing__logo {
+.promo__landing {
   position: absolute;
   max-width: 320px;
   margin: 82px auto 122px;
@@ -28,16 +27,34 @@
   text-align: center;
 }
 
-@media screen and (max-width: 619px) {
-  .landing__logo {
+@media screen and (max-width: 1023px) {
+  .promo {
+    min-height: 784px;
+  }
+
+  .promo__landing {
+    margin: 224px auto 240px;  
+  }
+  
+  .promo__title {
+    margin: 326px auto 342px; 
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .promo {
+    min-height: 570px;
+  }
+
+  .promo__landing {
     max-width: 248px;
     margin: 142px auto 180px;  
   }
   
   .promo__title {
-    margin-top: 207px;
-    max-width: 315px;
+    margin: 207px auto 246px;  
+    max-width: 320px;
     font-size: 31px;
-    line-height: 1.3;
+    line-height: 1.25;
   }
 }

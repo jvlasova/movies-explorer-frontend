@@ -1,4 +1,11 @@
-.header__container {
+.header__account {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  margin: 0 70px;
+}
+
+.header__promo {
   min-height: 74px;
   background-color: rgba(7, 48, 66, 1);
   display: flex;
@@ -7,15 +14,9 @@
   padding: 0 70px;
 }
 
-.header__account {
-  min-height: 74px;
+.header__container {
   display: flex;
-  align-items: center;
-  margin: 0 70px;
-}
-
-.header__sign {
-  display: flex;
+  gap: 30px;
 }
 
 .header__link {
@@ -39,7 +40,7 @@
   opacity: .5;
 }
 
-.header__button {
+.header__link_type_enter {
   max-width: 76px;
   min-height: 32px;
   font-style: normal;
@@ -54,28 +55,33 @@
   transition: opacity .4s ease-in-out;
 }
 
-.header__button:hover {
+.header__link_type_enter:hover {
   cursor: pointer;
   opacity: .5;
 }
 
 @media screen and (max-width: 1023px) {
-  .header__container {
-    padding: 0 30px;
+  .header__account {
+    margin: 0 14px;
   }
 
-  .header__account {
-    margin: 0 30px;
+  .header__promo {
+    padding: 0 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .header__container {
+  .header__account {
+    margin: 0 14px;
+  }
+
+  .header__promo {
     padding: 0 14px;
   }
 
-  .header__account {
-    margin: 0 14px;
+  .header__container {
+    display: flex;
+    gap: 14px;
   }
 
   .header__link {

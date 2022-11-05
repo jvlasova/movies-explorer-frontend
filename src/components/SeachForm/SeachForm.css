@@ -42,7 +42,6 @@
   min-width: 34px;
 }
 
-
 .form-seach__toggle {
   display: flex;
   align-items: center;
@@ -86,7 +85,6 @@
   .form-seach__toggle {
     flex-direction: row-reverse;
   }
-
 }
 
 @media screen and (max-width: 767px) {

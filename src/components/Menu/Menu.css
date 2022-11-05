@@ -1,0 +1,100 @@
+.menu-mobile {
+  position: fixed;
+  z-index: 1;
+  right: -100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -18px;
+  background-color: rgba(32, 32, 32, 1);
+  transition: .8s ease-in-out;
+}
+
+.menu-mobile_opened {
+  right: 0;
+}
+
+.menu-mobile__container {
+  display: block;
+  
+}
+
+.menu-mobile__close {
+  background: url("./../../images/header/close_hamburger.svg") no-repeat center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  transition: .1s ease;
+  cursor: pointer;
+  transition: opacity .4s ease-in-out;
+}
+
+.menu-mobile__close:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+.menu-mobile__navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 65px;
+}
+
+.menu-mobile__list-item {
+  list-style: none;
+  padding-bottom: 7px;
+  font-weight: 500;
+  font-size: 18;
+  line-height: 1.2px;
+}
+
+.menu-mobile__link {
+  width: auto;
+  color: rgba(255, 255, 255, 1);
+  transition: .3s ease;
+  text-align: center;
+  padding-bottom: 7px;
+  text-decoration: none;
+}
+
+.menuMobile__link_active {
+  text-decoration: underline;
+}
+
+@media (max-width: 1023px) {
+  .menu-mobile {
+    width: 51vw;
+  }
+
+  .menu-mobile__close {
+    position:absolute;
+    top: 40px;
+    right: 20px;
+  }
+
+  .menu-mobile__navigation {
+    margin-top: 105px;
+  }
+
+  .menu-mobile__list-item:not(:first-child) {
+    margin-top: 22px;
+  }
+
+  .menu-mobile__link {
+    padding-bottom: 4px;
+  }
+
+  .menu-mobile__container:last-child {
+    margin-bottom: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-mobile {
+      display: none;
+  }
+}

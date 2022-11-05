@@ -6,7 +6,6 @@
 
 .movies__container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin: 14px 12px 0;
 }
@@ -26,17 +25,19 @@
   margin: 0;
 }
 
-.movies__delete-button {
-  max-width: 24px;
-  transition: opacity .4s ease-in-out;
+.movies__button {
+  min-width: 16px;
+  border: none;
+  background: none;
+  transition: opacity 0.4s ease-in-out;
 }
 
-.movies__delete-button:hover {
+.movies__button:hover {
   cursor: pointer;
-  opacity: .5;
+  opacity: 0.5;
 }
 
-.movies__duration{
+.movies__duration {
   font-style: normal;
   font-weight: 400;
   font-size: 11px;

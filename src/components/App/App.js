@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom';
 import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
@@ -9,12 +9,20 @@ import Login from '../Login/Login';
 import Page404 from '../Page404/Page404';
 
 function App() {
+  const [isHamburger, setIsHamburger] = useState(false);
+
+  function onHandleHamburger() {
+    setIsHamburger(!isHamburger);
+}
+
 return (   
     <div className='root'>
       <Switch>
           <Route exact path='/'> 
-            <Main 
-            />
+            <Main
+            hamburger={{isHamburger, setIsHamburger}}
+            onHandleHamburger={onHandleHamburger}
+          />
           </Route>
           <Route path='/movies'>
             <Movies />
@@ -34,9 +42,7 @@ return (
           <Route path='*'> 
             <Page404 />
           </Route>
-       
       </Switch>
-     
     </div>
   );
 }

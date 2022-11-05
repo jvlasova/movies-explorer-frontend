@@ -73,6 +73,11 @@
   margin: 0 auto;
 }
 
+.form__edit:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
 .form__logout {
   font-style: normal;
   font-weight: 500;

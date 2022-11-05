@@ -1,6 +1,7 @@
 .aboutProject {
   min-height: 608px;
   margin: 0 70px;
+  padding: 0;
 }
 
 .aboutProject__title {
@@ -30,6 +31,7 @@
   line-height: 1.21;
   color: rgba(255, 255, 255, 1);
   padding-top: 70px;
+  margin: 0;
 }
 
 .aboutProject__text {
@@ -39,14 +41,15 @@
   line-height: 1.4;
   color: rgba(255, 255, 255, 1);
   padding: 26px 0 0;
+  margin: 0;
 }
 
 .aboutProject__container {
-  min-width: 1140px;
+  max-width: 1140px;
   display: grid;
   grid-template-columns: minmax(228px, 1fr) minmax(912px, 1fr);
   list-style: none;
-  padding: 110px 0;
+  padding: 110px 0 0;
 }
 
 .aboutProject__one-week {
@@ -57,7 +60,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(48, 48, 48, 1);
   text-align: center;
   background: rgba(43, 224, 128, 1);
 }
@@ -70,9 +73,9 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
+  color: rgba(255, 255, 255, 1);
   text-align: center;
-  background: rgba(232, 232, 232, 1);
-  ;
+  background: rgba(48, 48, 48, 1);
 }
 
 .aboutProject__text-development {
@@ -86,27 +89,48 @@
   margin: 0;
 }
 
+@media screen and (max-width: 1279px) {
+  .aboutProject__container {
+    min-width: 668px;
+    grid-template-columns: minmax(140px, 1fr) minmax(528px, 1fr);
+    padding: 93px 0 0;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .aboutProject {
+    min-height: 585px;
     margin: 0 50px;
+  }
+
+  .aboutProject__title {
+    line-height: 1.2;
+    padding: 90px 0 23px;
+  }
+
+  .aboutProject__text {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 22px 0 0;
   }
 
   .aboutProject__container {
     min-width: 668px;
     grid-template-columns: minmax(140px, 1fr) minmax(528px, 1fr);
-    padding: 93px 0 90px;
+    padding: 93px 0 0;
   }
 }
 
-@media screen and (max-width: 619px) {
+@media screen and (max-width: 767px) {
   .aboutProject {
+    min-height: 641px;
     margin: 0 18px;
   }
 
   .aboutProject__title {
     font-size: 18px;
     line-height: 1.2;
-    padding: 70px 0 28px;
+    padding: 60px 0 28px;
   }
 
   .aboutProject__two-columns {
@@ -129,6 +153,22 @@
   .aboutProject__container {
     min-width: 284px;
     grid-template-columns: minmax(100px, 1fr) minmax(184px, 1fr);
-    padding: 60px 0 69px;
+    padding: 60px 0 0;
+  }
+  
+  .aboutProject__one-week {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  
+  .aboutProject__four-week {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  
+  .aboutProject__text-development {
+    font-weight: 400;
+    font-size: 11px;
+    padding: 10px 0 0;
   }
 }
