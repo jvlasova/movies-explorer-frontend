@@ -10,9 +10,10 @@ function Menu() {
   }
 
     return (
-      <div className={`menu-mobile ${ setIsHamburger ? 'menu-mobile_opened': '' }`}>
+      <div className={`menu-mobile ${setIsHamburger ? 'menu-mobile_opened': ''}`}>
         <div className='menu-mobile__container'>
           <button
+            type='button'
             className='menu-mobile__close'
             onClick={onHandleHamburger}
           />

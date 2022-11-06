@@ -2,22 +2,15 @@
   width: 40px;
   height: 43px;
   position: absolute;
-  right: 10px;
+  right: 30px;
   transition: opacity .4s ease-in-out;
   border: 0;
-  background: url('../../images/header/hamburger.svg');
+  background: url('../../images/header/hamburger.svg') no-repeat;
 }
 
 .hamburger:hover {
   cursor: pointer;
   opacity: .5;
-}
-
-.hamburger__image {
-  max-width: 40px;
-  max-height: 43px;
-  background: none;
-  border: 0;
 }
 
 @media (min-width: 1023px) {
@@ -26,8 +19,8 @@
   }
 }
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
   .hamburger {
-    right: 30px;
+    right: 4px;
   }
 }

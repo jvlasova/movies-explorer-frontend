@@ -38,7 +38,11 @@
   opacity: .5;
 }
 
-.form-seach__image {
+.form-seach__image_blue {
+  min-width: 34px;
+}
+
+.form-seach__image_grey {
   min-width: 34px;
 }
 
@@ -103,6 +107,15 @@
     margin: 0 10px;
     min-height: 248px;
   }
+
+  .form-seach__image_grey {
+    display: none;
+  }
+
+  .form-seach__input { 
+    text-align: start;
+  }
+
 
   .form-seach__container {
     margin: 98px 10px 0;

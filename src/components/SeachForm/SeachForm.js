@@ -6,7 +6,7 @@ function SeachForm() {
   return (
     <form className='form-seach'>
       <div className='form-seach__container'>
-        <img className='form-seach__image' src={seach_grey} alt='Seach' />
+        <img className='form-seach__image_grey' src={seach_grey} alt='Seach' />
         <input
           className='form-seach__input'
           name='seach'
@@ -19,7 +19,7 @@ function SeachForm() {
           aria-label='submit'
           className='form-seach__button'
         >
-          <img className='form-seach__image' src={seach_blue} alt='Seach' />
+          <img className='form-seach__image_blue' src={seach_blue} alt='Seach' />
         </button>
       </div>
       <div className='form-seach__border'></div>

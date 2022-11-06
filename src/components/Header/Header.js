@@ -4,12 +4,12 @@ import Navigation from '../Navigation/Navigation.js';
 import Hamburger from '../Hamburger/Hamburger';
 import Menu from '../Menu/Menu';
 
-function Header(props) {
+function Header(props) { 
   const { 
     hamburger,
     onHandleHamburger,
   } = props;
- 
+
   return (
     <>
       <Menu

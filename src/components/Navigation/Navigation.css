@@ -77,6 +77,10 @@
 }
 
 @media (max-width: 1023px) {
+  .profile__container {
+    display: none;
+  }
+
   .profile__wrapper {
     display: none;
   }

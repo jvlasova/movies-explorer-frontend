@@ -113,14 +113,10 @@
   .menu-mobile__link {
     padding-bottom: 4px;
   }
-
-  /* .menu-mobile__container:last-child {
-    margin-bottom: 90px;
-  } */
 }
 
 @media (min-width: 1024px) {
   .menu-mobile {
-      display: none;
+    display: none;
   }
 }
