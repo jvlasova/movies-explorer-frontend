@@ -1,10 +1,16 @@
 .profile__header_container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-left: 44px;
 }
 
-.profile__wrapper {
+.profile__container {
   display: flex;
+}
+.profile__wrapper {
+  min-width: 548px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .profile__link_movies {
@@ -52,9 +58,6 @@
 
 .profile__link {
   max-width: 100px;
-  position:absolute;
-  top: 21px;
-  right: 70px;
   transition: opacity .4s ease-in-out;
 }
 

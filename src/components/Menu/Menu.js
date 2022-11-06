@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './Menu.css';
 import { NavLink} from "react-router-dom";
 
-export default function Menu() {
+function Menu() {
   const [isHamburger, setIsHamburger] = useState(false);
 
   function onHandleHamburger() {
@@ -53,3 +53,5 @@ export default function Menu() {
       </div>
     );
 }
+
+export default Menu;

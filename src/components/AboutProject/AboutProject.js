@@ -15,11 +15,11 @@ function AboutProject() {
           </li>
         </ul>
         <div className='aboutProject__container'>
-        <div className='aboutProject__weeks'>
+          <div className='aboutProject__weeks'>
             <p className='aboutProject__one-week'>1 неделя</p>
             <p className='aboutProject__text-development'>Back-end</p>
-        </div>
-        <div className='aboutProject__weeks'>
+          </div>
+          <div className='aboutProject__weeks'>
             <p className='aboutProject__four-week'>4 недели</p>
             <p className='aboutProject__text-development'>Front-end</p>
           </div>
