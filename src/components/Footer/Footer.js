@@ -7,8 +7,12 @@ function Footer() {
       <div className='footer__container'>
         <p className='footer__text'>&copy; 2022</p>
         <div footer__wrapper className='footer__wrapper'>
-          <a href='https://practicum.yandex.ru' className='footer__link' title='Yandex.Practicum'>Яндекс.Практикум</a>
-          <a href='https://github.com/jvlasova/movies-explorer-frontend' className='footer__link' title='GitHub'>GitHub</a>
+          <a href='https://practicum.yandex.ru' className='footer__link' title='Yandex.Practicum' target='_blank' rel='noopener noreferrer'>
+            Яндекс.Практикум
+          </a>
+          <a href='https://github.com/jvlasova/movies-explorer-frontend' className='footer__link' title='GitHub' target='_blank' rel='noopener noreferrer'>
+            GitHub
+          </a>
         </div>
       </div>
     </footer>

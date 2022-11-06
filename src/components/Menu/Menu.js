@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './Menu.css';
 import { NavLink} from "react-router-dom";
 
-export default function Menu(props) {
+export default function Menu() {
   const [isHamburger, setIsHamburger] = useState(false);
 
   function onHandleHamburger() {
@@ -10,7 +10,7 @@ export default function Menu(props) {
   }
 
     return (
-      <div className={`menu-mobile ${ setIsHamburger ? `menu-mobile_opened`: '' }`}>
+      <div className={`menu-mobile ${ setIsHamburger ? 'menu-mobile_opened': '' }`}>
         <div className='menu-mobile__container'>
           <button
             className='menu-mobile__close'
@@ -36,9 +36,19 @@ export default function Menu(props) {
                 to='/saved-movies'
                 className='menu-mobile__link'
                 activeClassName='menuMobile__link_active'
-              >Сохраненные фильмы</NavLink>
+              >Сохраннёные фильмы</NavLink>
             </div>
           </nav>
+        </div>
+        <div className='menu-mobile__container'>
+          <NavLink
+            to='/profile'
+            itle='Аккаунт'
+            className='menu-mobile__link menu-mobile__link_type_account'
+            activeClassName='menuMobile__link_active_account'
+          >
+            <div className='menu-mobile__image'/>
+          </NavLink>
         </div>
       </div>
     );

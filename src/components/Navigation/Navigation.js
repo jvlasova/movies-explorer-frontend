@@ -13,10 +13,10 @@ function Navigation() {
           <NavLink to='/saved-movies' title='Сохраненные фильмы' className='profile__link_saved-movies' activeClassName='profile__link_saved-movies_active'>
             Сохраненные фильмы
           </NavLink>
-          <NavLink className='profile__link' to='/profile'>
-            <img className= 'profile__image' src={profile} alt='Аккаунт' />
-          </NavLink> 
         </div> 
+        <NavLink className='profile__link' to='/profile'>
+          <img className= 'profile__image' src={profile} alt='Аккаунт' />
+        </NavLink> 
       </div>
     </nav>
   );

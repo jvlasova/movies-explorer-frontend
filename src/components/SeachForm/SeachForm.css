@@ -58,14 +58,29 @@
 }
 
 .toggle {
-  min-width: 16px;
-  min-height: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 36px;
+  max-height: 20px;
   border-radius: 20px;
-  background: rgba(43, 224, 128, 1);
+  padding: 2px;
+  background: rgba(32, 32, 32, 1);
   border: 0;
 }
 
-.toggle:hover {
+.toggle__turn {
+  display: flex;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 2px 2px 2px 16px;
+  background: rgba(43, 224, 128, 1);
+  border-radius: 100%;
+  box-sizing: border-box;
+  transition: opacity .4s ease-in-out;
+}
+
+.toggle__turn:hover {
   cursor: pointer;
   opacity: .5;
 }
@@ -78,12 +93,8 @@
 
 @media screen and (max-width: 1023px) {
   .form-seach {
+    margin: 0 30px;
     min-height: 246px;
-    margin: 0 10px;
-  }
-
-  .form-seach__toggle {
-    flex-direction: row-reverse;
   }
 }
 
@@ -106,7 +117,6 @@
   }
   
   .form-seach__toggle {
-    flex-direction: row-reverse;
     margin: 20px 0 20px;
   }
 

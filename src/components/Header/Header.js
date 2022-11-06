@@ -8,7 +8,7 @@ function Header(props) {
   const { 
     hamburger,
     onHandleHamburger,
-} = props;
+  } = props;
  
   return (
     <>

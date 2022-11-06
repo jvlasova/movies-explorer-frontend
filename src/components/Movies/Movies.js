@@ -25,7 +25,7 @@ function Movies() {
             <div className='movies__container'>
               <h2 className='movies__title'>33 слова о дизайне</h2>
               <button
-                type='submit'
+                type='button'
                 className='movies__button'
               >
                 <img className='movies__button' src={save} alt='Кнопка активная' />
@@ -38,7 +38,7 @@ function Movies() {
             <div className='movies__container'>
               <h2 className='movies__title'>Киноальманах «100 лет дизайна»</h2>
               <button
-                type='submit'
+                type='button'
                 className='movies__button'
               >
                 <img className='movies__button' src={button} alt='Кнопка неактивная' />
@@ -51,7 +51,7 @@ function Movies() {
             <div className='movies__container'>
               <h2 className='movies__title'>В погоне за Бенкси</h2>
               <button
-                type='submit'
+                type='button'
                 className='movies__button'
               >
                 <img className='movies__button' src={button} alt='Кнопка неактивная' />

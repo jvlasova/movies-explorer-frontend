@@ -16,7 +16,7 @@ function SeachForm() {
         />
         <button 
           type='button'
-          aria-label='Поиск'
+          aria-label='submit'
           className='form-seach__button'
         >
           <img className='form-seach__image' src={seach_blue} alt='Seach' />
@@ -24,13 +24,14 @@ function SeachForm() {
       </div>
       <div className='form-seach__border'></div>
       <div className='form-seach__toggle'>
-        <p className='form-seach__text'>Короткометражки</p>
         <button
           type='button'
           aria-label='Поиск корометражек'
           className='toggle'
         >
+          <div className='toggle__turn'></div>
         </button>
+        <p className='form-seach__text'>Короткометражки</p>
       </div>
     </form>
   );

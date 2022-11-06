@@ -91,6 +91,10 @@
     border-radius: 5px;
   }
 
+  .aboutMe__wrapper{
+    max-width: 364px;
+  }
+
   .aboutMe__heading {
     font-size: 40px;
     line-height: 1;
@@ -134,6 +138,10 @@
     border-radius: 5px;
   }
 
+  .aboutMe__wrapper{
+    max-width: 292px;
+  }
+
   .aboutMe__heading {
     font-size: 30px;
     line-height: 1.2;
@@ -148,7 +156,6 @@
   }
 
   .aboutMe__text {
-    max-width: 292px;
     font-size: 11px;
     line-height: 1.45;
     padding: 20px 0 40px;
