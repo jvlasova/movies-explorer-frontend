@@ -114,6 +114,48 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .aboutMe {
+    margin: 0 18px;
+  }
+
+  .aboutMe__title {
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 70px 0 28px;
+  }
+
+  .aboutMe__image {
+    max-width: 292px;
+    max-height: 327px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .aboutMe__wrapper{
+    max-width: 292px;
+  }
+
+  .aboutMe__heading {
+    font-size: 30px;
+    line-height: 1.2;
+    padding: 40px 0 0;
+  }
+
+  .aboutMe__subtitle {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.45;
+    padding: 20px 0 0;
+  }
+
+  .aboutMe__text {
+    font-size: 11px;
+    line-height: 1.45;
+    padding: 20px 0 40px;
+  }
+}
+
 @media screen and (max-width: 619px) {
   .aboutMe {
     margin: 0 18px;

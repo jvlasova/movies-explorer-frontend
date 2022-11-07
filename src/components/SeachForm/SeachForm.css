@@ -71,6 +71,12 @@
   padding: 2px;
   background: rgba(32, 32, 32, 1);
   border: 0;
+  transition: opacity .4s ease-in-out;
+}
+
+.toggle:hover {
+  cursor: pointer;
+  opacity: .5;
 }
 
 .toggle__turn {

@@ -20,12 +20,15 @@ return (
       <Switch>
           <Route exact path='/'> 
             <Main
+              hamburger={{isHamburger, setIsHamburger}}
+              onHandleHamburger={onHandleHamburger}
+            />
+          </Route>
+          <Route path='/movies'>
+            <Movies
             hamburger={{isHamburger, setIsHamburger}}
             onHandleHamburger={onHandleHamburger}
           />
-          </Route>
-          <Route path='/movies'>
-            <Movies />
           </Route>
           <Route path='/saved-movies'>
             <SavedMovies />

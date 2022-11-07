@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import './Menu.css';
 import { NavLink} from "react-router-dom";
 
-function Menu() {
+function Menu(props) {
   const [isHamburger, setIsHamburger] = useState(false);
 
   function onHandleHamburger() {
     setIsHamburger(!isHamburger);
   }
-
+  
     return (
-      <div className={`menu-mobile ${setIsHamburger ? 'menu-mobile_opened': ''}`}>
+      <div className={`menu-mobile ${setIsHamburger ? 'menu-mobile_opened' : ''}`}>
         <div className='menu-mobile__container'>
           <button
             type='button'

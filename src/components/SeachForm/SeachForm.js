@@ -15,8 +15,8 @@ function SeachForm() {
           required
         />
         <button 
-          type='button'
-          aria-label='submit'
+          type='submit'
+          aria-label='Поиск'
           className='form-seach__button'
         >
           <img className='form-seach__image_blue' src={seach_blue} alt='Seach' />

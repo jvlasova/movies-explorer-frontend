@@ -4,10 +4,20 @@ import Techs from '../Techs/Techs';
 import AboutMe from '../AboutMe/AboutMe';
 import Portfolio from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer.js';
+//import Header from '../Header/Header'
 
-function Main() {
+function Main(props) {
+  // const { 
+  //   hamburger,
+  //   onHandleHamburger,
+  // } = props;
+
   return (
     <>
+     {/* <Header
+        hamburger={hamburger}
+        onHandleHamburger={onHandleHamburger}
+      /> */}
       <main>
         <Promo />
         <AboutProject />

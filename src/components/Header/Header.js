@@ -18,7 +18,9 @@ function Header(props) {
       />
       <header className='header__account'>
         <Logo />
-        <Hamburger />
+        <Hamburger 
+          onHandleHamburger={onHandleHamburger}
+        />
         <Navigation />
       </header>
     </>

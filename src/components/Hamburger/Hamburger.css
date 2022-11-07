@@ -2,7 +2,7 @@
   width: 40px;
   height: 43px;
   position: absolute;
-  right: 30px;
+  right: 24px;
   transition: opacity .4s ease-in-out;
   border: 0;
   background: url('../../images/header/hamburger.svg') no-repeat;

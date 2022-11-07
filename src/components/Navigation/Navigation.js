@@ -4,7 +4,7 @@ import profile from '../../images/profile/profile.svg'
 
 function Navigation() {
   return (
-     <nav>
+     <div>
       <div className='profile__header_container'>
         <div className='profile__container'>
           <NavLink to='/movies' title='Фильмы' className='profile__link_movies' activeClassName='profile__link_movies_active' >
@@ -20,7 +20,7 @@ function Navigation() {
           </NavLink> 
         </div> 
       </div>
-    </nav>
+    </div>
   );
 }
 

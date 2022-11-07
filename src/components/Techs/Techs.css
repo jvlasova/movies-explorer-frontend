@@ -65,7 +65,6 @@
   line-height: 1.2;
   color: rgba(255, 255, 255, 1);
   transition: opacity .4s ease-in-out;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 1023px) {

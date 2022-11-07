@@ -63,6 +63,7 @@
 
   .portfolio__container {
     margin: 0 0 90px;
+    list-style: none;
   }
 
   .portfolio__link {
