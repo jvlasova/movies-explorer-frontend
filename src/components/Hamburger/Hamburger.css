@@ -1,0 +1,26 @@
+.hamburger {
+  width: 40px;
+  height: 43px;
+  position: absolute;
+  right: 24px;
+  transition: opacity .4s ease-in-out;
+  border: 0;
+  background: url('../../images/header/hamburger.svg') no-repeat;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+@media (min-width: 1023px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    right: 4px;
+  }
+}

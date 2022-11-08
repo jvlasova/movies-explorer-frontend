@@ -1,0 +1,42 @@
+.nav {
+  min-height: 66px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(39, 39, 39, 1);
+  list-style: none;
+}
+
+.nav__button:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+.nav__link {
+  min-height: 524px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  padding: 0;
+  color: rgba(255, 255, 255, 1);
+  transition: opacity .4s ease-in-out;
+}
+
+.nav__link:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+@media screen and (max-width: 619px) {
+  .nav {
+    gap: 24px;
+  }
+
+  .nav__link {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}
