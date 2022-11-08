@@ -79,12 +79,23 @@
   opacity: .5;
 }
 
-.toggle__turn {
+.toggle__turn_active {
   display: flex;
   min-width: 16px;
   min-height: 16px;
   margin: 2px 2px 2px 16px;
   background: rgba(43, 224, 128, 1);
+  border-radius: 100%;
+  box-sizing: border-box;
+  transition: opacity .4s ease-in-out;
+}
+
+.toggle__turn {
+  display: flex;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 2px 16px 2px 2px;
+  background: rgba(245, 245, 245, 1);
   border-radius: 100%;
   box-sizing: border-box;
   transition: opacity .4s ease-in-out;

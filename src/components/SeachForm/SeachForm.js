@@ -29,7 +29,7 @@ function SeachForm() {
           aria-label='Поиск корометражек'
           className='toggle'
         >
-          <div className='toggle__turn'></div>
+          <div className='toggle__turn_active'></div>
         </button>
         <p className='form-seach__text'>Короткометражки</p>
       </div>
