@@ -1,48 +1,81 @@
+import React from 'react';
 import './Profile.css';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import { useFormWithValidation } from '../../hooks/useForm';
 import Header from '../Header/Header';
 
-function Profile() {
+function Profile({ loggedIn, onUpdateUser, handleSignOut }) {
+  const currentUser = React.useContext(CurrentUserContext);
+  const { values, handleChange, errors, isValid, resetForm } =
+    useFormWithValidation();
+  
+    React.useEffect(() => {
+      if (currentUser) {
+        resetForm(currentUser, {}, true);
+      }
+    }, [currentUser, resetForm]);
+  
+    function handleSubmit(e) {
+      e.preventDefault();
+      onUpdateUser(values)
+    }
+
   return (
     <section className='profile'>
-      <Header />
-      <h1 className='form__title'>Привет, Виталий!</h1>
-      <form name='formProfile' className='form__input-label'>
-        <div className='form__field'>Имя
+      <Header 
+        loggedIn={loggedIn}
+      />
+      <h1 className='form__title'>{`Привет, ${currentUser.name}!`}</h1>
+      <form name='formProfile' className='form__input-label'  onSubmit={handleSubmit}>
+        <label className='form__field' htmlFor='name'>
+          Имя
           <input
-            type='text'
-            name='name'
+            id='name'
             className='form__input'
+            name='name'
+            value={values.name || ''}
+            onChange={handleChange}
             minLength='2'
             maxLength='30'
-            />Виталий
-        </div>
-        <div className='form__field'>Email
+            pattern='^[A-Za-zА-Яа-яЁё -]+$'
+          />
+        </label>
+        <label className='form__field' htmlFor='email'>
+          Email
           <input
-            type='email'
-            name='email'
+            id='email'
             className='form__input'
-            minLength='6'
+            name='email'
+            value={values.email || ''}
+            onChange={handleChange}
+            minLength='2'
             maxLength='30'
-          />123@123.ru
-        </div>
-      </form>
+            pattern='^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$'
+          />
+        </label>
+      <span className={`input__text-error ${errors.name || errors.login || errors.password ? 'input__text-error_visible' : ''}`}>
+        Что-то пошло не так...
+      </span>
       <div className='form__button'>
-      <button
-          type='button'
+        <button
           aria-label='Редактировать'
-          className='form__edit'
-      >
-        Редактировать
-      </button>
-      <button
+          className={`form__edit ${
+            !isValid && 'form__edit_disabled'
+          }`} 
+        >
+          Редактировать
+        </button>
+        <button
           type='button'
           aria-label='Выйти из аккаунта'
           className='form__logout'
-      >
-        Выйти из аккаунта
-      </button>
+          onClick={handleSignOut}
+        >
+          Выйти из аккаунта
+        </button>
       </div>
-    </section>
+      </form>
+   </section>
   );
 };
 

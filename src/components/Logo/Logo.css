@@ -1,5 +1,7 @@
 .logo {
   max-width: 38px;
+  display: flex;
+  align-items: center;
   transition: opacity .4s ease-in-out;
 }
 

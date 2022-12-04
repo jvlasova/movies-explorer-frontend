@@ -1,4 +1,12 @@
-.movies-card {
+.movies {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  background: rgba(34, 34, 34, 1);
+}
+
+.saved-movies {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -14,6 +22,7 @@
 
 .image__movies {
   width: 100%;
+  height: 151px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
@@ -22,7 +31,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
-  line-height: 1.2;
+  line-height: 1.7;
   color: rgba(255, 255, 255, 1);
   margin: 0;
 }
@@ -30,11 +39,36 @@
 .movies__button {
   min-width: 16px;
   border: none;
-  background: none;
+  background: url('../../images/movies/button.svg') no-repeat center;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.movies__button_delete {
+  min-width: 16px;
+  border: none;
+  object-fit: cover;
+  background: url('../../images/movies/delete.svg') no-repeat center;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.movies__button_save {
+  min-width: 16px;
+  border: none;
+  background: url('../../images/movies/save.svg') no-repeat center;
   transition: opacity 0.4s ease-in-out;
 }
 
 .movies__button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.movies__button_save:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.movies__button_delete:hover {
   cursor: pointer;
   opacity: 0.5;
 }
@@ -47,9 +81,3 @@
   color: rgba(139, 139, 139, 1);
   margin: 10px 12px 14px;
 }
-
-/* @media screen and (max-width: 1023px) {
-  .movies-card {
-    max-width: 339px;
-  }
-} */

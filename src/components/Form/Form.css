@@ -111,19 +111,30 @@
   opacity: .8;
 }
 
-.input-error {
+.auth__register-button_disabled {
+  background-color: rgba(139, 139, 139, 1);
+  pointer-events: none;
+}
+
+.input__error_red {
   color: rgba(255, 48, 85, 1);
 }
 
-.input-text-error {
+.input__text-error {
+  visibility: hidden;
   display: block;
   height: 14.52px;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
+  text-align: center;
   line-height: 1.2;
   color: rgba(255, 48, 85, 1);
   margin-top: 6px;
+}
+
+.input__text-error_visible {
+  visibility: visible;
 }
 
 @media screen and (max-width: 1023px) {

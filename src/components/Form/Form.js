@@ -1,10 +1,11 @@
 import React from 'react';
 import './Form.css';
 
-function Form({ children }) {
+function Form({ form, children, onSubmit }) {
+
   return (
     <fieldset className='auth'>
-      <form name='form'>
+      <form name={form} onSubmit={onSubmit}>
         {children}
       </form>
     </fieldset>

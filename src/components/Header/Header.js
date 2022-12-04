@@ -1,30 +1,37 @@
+import React from 'react';
 import './Header.css';
+import { NavLink } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation.js';
-import Hamburger from '../Hamburger/Hamburger';
 import Menu from '../Menu/Menu';
 
-function Header(props) { 
-  const { 
-    hamburger,
-    onHandleHamburger,
-  } = props;
+function Header({ loggedIn }) {
 
-  return (
-    <>
-      <Menu
-        hamburger={hamburger}
-        onHandleHamburger={onHandleHamburger}
-      />
-      <header className='header__account'>
+  if (!loggedIn) {
+    return (
+      <div className='header__promo'>
         <Logo />
-        <Hamburger 
-          onHandleHamburger={onHandleHamburger}
-        />
-        <Navigation />
-      </header>
-    </>
-  );
+        <div className='header__container'>
+          <NavLink className='header__link' to='/signup'>
+            Регистрация
+          </NavLink>
+          <NavLink className='header__link header__link_type_enter' to='/signin'>
+            Войти
+          </NavLink>
+        </div>
+      </div>
+    )
+    } else {
+      return (
+        <>
+          <Menu />
+          <div className='header__account'>
+            <Logo />
+            <Navigation />
+          </div>
+        </>
+      )
+    }
 }
 
 export default Header;

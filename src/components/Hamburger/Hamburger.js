@@ -1,17 +1,16 @@
 import './Hamburger.css';
 
-function Hamburger(props) {
-  const {
-    onHandleHamburger
-  } = props;
-
+function Hamburger({ handleHamburger }) {
+  
   return (
-     <button
-      type='button'
-      className='hamburger'
-      onClick={onHandleHamburger}
-     >
-    </button>
+    <>
+      <button
+        type='button'
+        className='hamburger'
+        onClick={handleHamburger}
+      >
+      </button>
+    </>
   );
 }
 

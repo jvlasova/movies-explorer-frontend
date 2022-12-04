@@ -1,21 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react';
 import './Menu.css';
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Hamburger from '../Hamburger/Hamburger';
 
-function Menu(props) {
-  const [isHamburger, setIsHamburger] = useState(false);
+function Menu() {
+  const [isHamburger, setIsHamburger] = React.useState(false);
 
-  function onHandleHamburger() {
+  function handleHamburger() {
     setIsHamburger(!isHamburger);
   }
-  
-    return (
-      <div className={`menu-mobile ${setIsHamburger ? 'menu-mobile_opened' : ''}`}>
+    
+  return (
+    <>
+      <Hamburger
+        handleHamburger={handleHamburger}
+      />
+      <div className={`menu-mobile ${isHamburger ? 'menu-mobile_opened' : ''}`}>
         <div className='menu-mobile__container'>
           <button
             type='button'
             className='menu-mobile__close'
-            onClick={onHandleHamburger}
+            onClick={handleHamburger}
           />
           <nav className='menu-mobile__navigation'>
             <div className='menu-mobile__list-item'>
@@ -44,7 +49,7 @@ function Menu(props) {
         <div className='menu-mobile__container'>
           <NavLink
             to='/profile'
-            itle='Аккаунт'
+            title='Аккаунт'
             className='menu-mobile__link menu-mobile__link_type_account'
             activeClassName='menuMobile__link_active_account'
           >
@@ -52,7 +57,8 @@ function Menu(props) {
           </NavLink>
         </div>
       </div>
-    );
+    </>
+  )
 }
 
 export default Menu;
