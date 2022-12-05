@@ -1,36 +1,44 @@
-import React from 'react';
-import './Movies.css';
-import Header from '../Header/Header';
-import SearchForm from '../SearchForm/SearchForm';
-//import Preloder from '../Preloader/Preloader';
-import MoviesCardList from '../MoviesCardList/MoviesCardList';
-import Footer from '../Footer/Footer';
+import React from "react";
 
-function Movies(props) {
-  
+import "./Movies.css";
+import Header from "../Header/Header";
+import SearchForm from "../SearchForm/SearchForm";
+import Preloder from "../Preloader/Preloader";
+import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import Footer from "../Footer/Footer";
+import { useMovies } from "../../hooks/useMovies";
+
+function Movies({ loggedIn }) {
+  const {
+    isPreloader,
+    moviesList,
+    isShortMovies,
+    searchValue,
+    filteredMovies,
+    handleSearchShort,
+    handleSubmitSearchForm,
+    handleDeleteMovies,
+    handleMarkAsSavedMovie,
+  } = useMovies();
+
   return (
     <>
-      <Header 
-        loggedIn={props.loggedIn}
+      <Header loggedIn={loggedIn} />
+      <SearchForm
+        onSearch={handleSubmitSearchForm}
+        onToggleSearch={handleSearchShort}
+        isShortMovies={isShortMovies}
+        searchValue={searchValue}
       />
-      <SearchForm 
-        handleSubmitSeachForm={props.handleSubmitSeachForm}
-      
-      />
-     {/* <Preloder /> */}
-      <MoviesCardList 
-                movies={props.movies}
-                //savedMovies={props.savedMovies}
-                isLikedMovie={props.isLikedMovie}
-                //handleSavedMovie={props.onModDeleteSavedMovie, props.onSaveMovie}
-                moviesButton={!props.moviesButton}
-                handleSavedMovie={props.handleSavedMovie}
-                onLike={props.onLikeClick}
-        onDelete={props.onDeleteClick}
-        //savedMovies={props.savedMoviesList}
-
-                //isPreloader={props.isPreloader && <Preloder />}
-              />
+      {isPreloader ? (
+        <Preloder />
+      ) : (
+        <MoviesCardList
+          movies={searchValue ? filteredMovies : moviesList}
+          onMovieDelete={handleDeleteMovies}
+          onMarkSavedMovie={handleMarkAsSavedMovie}
+        />
+      )}
       <Footer />
     </>
   );

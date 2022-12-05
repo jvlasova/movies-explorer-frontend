@@ -37,7 +37,7 @@ function Register({ onRegister }) {
           name='name'
           type='text'
           placeholder='Введите имя'
-          value={values.name || ''}
+          value={values?.name || ''}
           onChange={handleChange}
           required
           minLength='2'
@@ -53,7 +53,7 @@ function Register({ onRegister }) {
           name='login'
           type='text'
           placeholder='Введите email'
-          value={values.login || ''}
+          value={values?.login || ''}
           onChange={handleChange}
           required
           minLength='2'
@@ -69,7 +69,7 @@ function Register({ onRegister }) {
           name='password'
           type='password'
           placeholder='Введите пароль'
-          value={values.password || ''}
+          value={values?.password || ''}
           onChange={handleChange}
           required
           minLength='2'
