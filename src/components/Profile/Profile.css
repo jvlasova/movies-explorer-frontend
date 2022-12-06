@@ -24,7 +24,6 @@
 
 .form__field {
   display: flex;
-  justify-content: space-between;
   max-width: 396px;
   margin: 0 auto;
   padding: 13px 0;
@@ -48,9 +47,10 @@
 
 .form__input {
   width: 410px;
-  display: flex;
-  justify-content: space-between;
+  text-align: right;
+  padding: 0;
   background: rgba(32, 32, 32, 1);
+  color: rgba(255, 255, 255, 1);
   border: 0;
 }
 
@@ -73,6 +73,10 @@
   margin: 0 auto;
 }
 
+.form__edit_disabled {
+  color: rgba(139, 139, 139, 1);
+  pointer-events: none;
+}
 .form__edit:hover {
   cursor: pointer;
   opacity: .5;

@@ -1,16 +1,13 @@
 .profile__header_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
   margin-left: 44px;
+  display: flex;
+  justify-content:space-between;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .profile__container {
   display: flex;
-}
-.profile__wrapper {
-  min-width: 548px;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .profile__link_movies {

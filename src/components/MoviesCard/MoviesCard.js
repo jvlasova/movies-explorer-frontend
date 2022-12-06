@@ -1,79 +1,58 @@
-import './MoviesCard.css';
-import words from '../../images/movies/33words.svg';
-import almanah from '../../images/movies/almanah.svg';
-import banksy from '../../images/movies/Banksy.svg';
-import button_delete from '../../images/movies/delete.svg';
+import React from "react";
+import "./MoviesCard.css";
+import { BASE_URL_MOVIES } from "../../utils/MoviesApi";
 
-function MoviesCard() {
+function MoviesCard({
+  id,
+  savedId,
+  duration,
+  image,
+  trailerLink,
+  nameRU,
+  onMovieDelete,
+  onMarkSavedMovie,
+  isSavedMovies,
+}) {
+  const handleMovieCreate = () => {
+    onMarkSavedMovie(id);
+  };
+  const handleMovieDelete = () => {
+    onMovieDelete(savedId);
+  };
+
+  const addDurationMovies = (time) => {
+    const hours = Math.floor(time / 60);
+    const minutes = time % 60;
+    return `${hours}ч ${minutes}м`;
+  };
+
   return (
     <>
-      <article className='movies-card'>
-        <img className='image__movies' src={words} alt='33 world' />
-        <div className='movies__container'>
-          <h2 className='movies__title'>33 слова о дизайне</h2>
+      <section className="movies">
+        <a href={trailerLink} className="movies__link">
+          <img
+            src={`${BASE_URL_MOVIES}${image}`}
+            alt={nameRU}
+            className="image__movies"
+          />
+        </a>
+        <div className="movies__container">
+          <h2 className="movies__title">{nameRU}</h2>
           <button
-            type='button'
-            className='movies__button'
-          >
-            <img className='movies__delete-button' src={button_delete} alt='Удаление' />
-          </button>
+            type="button"
+            className={`movies__button ${
+              isSavedMovies ? "movies__button_save" : ""
+            }`}
+            aria-label="Сохранить в избранное"
+            onClick={isSavedMovies ? handleMovieDelete : handleMovieCreate}
+          />
         </div>
-        <div className='movies__duration'>1ч42м</div>
-      </article>
-      <article className='movies-card'>
-        <img className='image__movies' src={almanah} alt='100 лет' />
-        <div className='movies__container'>
-          <h2 className='movies__title'>Киноальманах «100 лет дизайна»</h2>
-          <button
-            type='button'
-            className='movies__button'
-          >
-            <img className='movies__delete-button' src={button_delete} alt='Удаление' />
-          </button>
-        </div>
-        <div className='movies__duration'>1ч42м</div>
-      </article>
-      <article className='movies-card'>
-        <img className='image__movies' src={banksy} alt='33 world' />
-        <div className='movies__container'>
-          <h2 className='movies__title'>В погоне за Бенкси</h2>
-          <button
-            type='button'
-            className='movies__button'
-          >
-            <img className='movies__delete-button' src={button_delete} alt='Удаление' />
-          </button>
-        </div>
-        <div className='movies__duration'>1ч42м</div>
-      </article>
-      <article className='movies-card'>
-        <img className='image__movies' src={banksy} alt='Бенкси' />
-        <div className='movies__container'>
-          <h2 className='movies__title'>В погоне за Бенкси</h2>
-          <button
-            type='button'
-            className='movies__button'
-          >
-            <img className='movies__delete-button' src={button_delete} alt='Удаление' />
-          </button>
-        </div>
-        <div className='movies__duration'>1ч42м</div>
-      </article>
-      <article className='movies-card'>
-        <img className='image__movies' src={banksy} alt='Бенкси' />
-        <div className='movies__container'>
-          <h2 className='movies__title'>В погоне за Бенкси</h2>
-          <button
-            type='button'
-            className='movies__button'
-          >
-            <img className='movies__delete-button' src={button_delete} alt='Удаление' />
-          </button>
-        </div>
-        <div className='movies__duration'>1ч42м</div>
-      </article>
+        <div className="movies__duration">{`${addDurationMovies(
+          duration
+        )}`}</div>
+      </section>
     </>
   );
-};
+}
 
 export default MoviesCard;
