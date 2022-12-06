@@ -5,6 +5,5 @@
 Cсылка на пул реквест, открытый из ветки level-3 в main:
 https://github.com/jvlasova/movies-explorer-frontend/pull/3#issue-1478915644
 
-
-Ссылка на публичный домен: 
-https://api.jvlasova.movies.nomoredomains.icu
+Cсылка на Frontend:
+https://jvlasova.movies.nomoredomains.icu
