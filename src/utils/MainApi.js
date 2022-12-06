@@ -10,7 +10,7 @@ const handleResponse = (res) => {
   return Promise.reject(`Error: ${res.status}`);
 };
 
-export const register = ({ values }, token) => {
+export const register = ({ values }) => {
   return fetch(`${BASE_URL_MAIN}/signup`, {
     method: "POST",
     headers: {
@@ -25,12 +25,12 @@ export const register = ({ values }, token) => {
   }).then((res) => handleResponse(res));
 };
 
-export const authorize = ({ values }, token) => {
+export const authorize = ({ values }) => {
   return fetch(`${BASE_URL_MAIN}/signin`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
     },
     credentials: "include",
     body: JSON.stringify({
@@ -40,7 +40,7 @@ export const authorize = ({ values }, token) => {
   }).then((res) => handleResponse(res));
 };
 
-export const signOut = (token) => {
+export const signOut = () => {
   return fetch(`${BASE_URL_MAIN}/signin`, {
     method: "POST",
     headers: {
@@ -52,7 +52,7 @@ export const signOut = (token) => {
   }).then((res) => handleResponse(res));
 };
 
-export const getUserInfo = (token) => {
+export const getUserInfo = () => {
   return fetch(`${BASE_URL_MAIN}/users/me`, {
     headers: {
       "Content-Type": "application/json",
@@ -62,7 +62,7 @@ export const getUserInfo = (token) => {
   }).then((res) => handleResponse(res));
 };
 
-export const setUserInfo = (data, token) => {
+export const setUserInfo = (data) => {
   return fetch(`${BASE_URL_MAIN}/users/me`, {
     method: "PATCH",
     headers: {
@@ -77,7 +77,7 @@ export const setUserInfo = (data, token) => {
   }).then((res) => handleResponse(res));
 };
 
-export const getSavedMovies = (token) => {
+export const getSavedMovies = () => {
   return fetch(`${BASE_URL_MAIN}/movies`, {
     method: "GET",
     headers: {
@@ -88,7 +88,7 @@ export const getSavedMovies = (token) => {
   }).then((res) => handleResponse(res));
 };
 
-export const markSavedMovies = (data, token) => {
+export const markSavedMovies = (data) => {
   return fetch(`${BASE_URL_MAIN}/movies`, {
     method: "POST",
     headers: {
@@ -112,8 +112,8 @@ export const markSavedMovies = (data, token) => {
   }).then((res) => handleResponse(res));
 };
 
-export const deleteMovie = (movieId) => {
-  return fetch(`${BASE_URL_MAIN}/movies/${movieId}`, {
+export const deleteMovie = (id) => {
+  return fetch(`${BASE_URL_MAIN}/movies/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -122,3 +122,4 @@ export const deleteMovie = (movieId) => {
     credentials: "include",
   }).then((res) => handleResponse(res));
 };
+

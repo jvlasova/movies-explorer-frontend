@@ -11,7 +11,7 @@ function SearchForm({ onSearch, isShortMovies, onToggleSearch, searchValue }) {
   function handleSubmitSearchForm(e) {
     e.preventDefault();
     if (!values.search) {
-      return;
+      return ;
     }
     onSearch(values.search);
   }
@@ -63,12 +63,12 @@ function SearchForm({ onSearch, isShortMovies, onToggleSearch, searchValue }) {
         <input
           type="checkbox"
           name="checkbox"
-          className={`toggle ${isShortMovies} ? 'toogle_search' : ''}`}
+          className='toggle'
           onClick={onToggleSearch}
-          value={isShortMovies}
+          value={!isShortMovies}
         />
         <span
-          className={`toggle__turn ${isShortMovies} ? toggle__turn_search : ''}`}
+          className={`toggle__turn ${!isShortMovies} ? toggle  : ''}`}
         ></span>
         <span className="form-search__text">Короткометражки</span>
       </label>

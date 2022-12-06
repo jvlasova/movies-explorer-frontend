@@ -107,7 +107,7 @@
 .form-search__border {
   width: 100%;
   border-bottom: 1px solid rgba(66, 66, 66, 1);
-  margin: 15px auto 30px;
+  margin: 0 auto 30px;
 }
 
 @media screen and (max-width: 1023px) {
