@@ -19,6 +19,7 @@ function Movies({ loggedIn }) {
     handleSubmitSearchForm,
     handleDeleteMovies,
     handleMarkAsSavedMovie,
+    movie,
   } = useMovies();
 
   return (

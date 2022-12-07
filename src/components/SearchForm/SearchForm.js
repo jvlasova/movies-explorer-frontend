@@ -68,7 +68,7 @@ function SearchForm({ onSearch, isShortMovies, onToggleSearch, searchValue }) {
           value={!isShortMovies}
         />
         <span
-          className={`toggle__turn ${!isShortMovies} ? toggle  : ''}`}
+          className={`toggle__turn ${!isShortMovies} ? toggle : ''}`}
         ></span>
         <span className="form-search__text">Короткометражки</span>
       </label>

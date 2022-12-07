@@ -142,7 +142,7 @@ export function useMovies() {
         }
       })
       .catch((err) => {
-        console.error(`Ошибка при сохранения фильма: ${err}`);
+        console.error(`Ошибка при сохранении: ${err}`);
       });
   }
 
