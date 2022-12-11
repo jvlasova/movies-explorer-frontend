@@ -63,6 +63,7 @@ function App() {
 
   function handleSignOut() {
     localStorage.removeItem("jwt");
+    localStorage.removeItem("searchValue");
     setCurrentUser({});
     setLoggedIn(false);
     history.push("/");

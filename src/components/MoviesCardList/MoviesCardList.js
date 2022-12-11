@@ -2,7 +2,12 @@ import React from "react";
 import "./MoviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-function MoviesCardList({ movies, onMarkSavedMovie, onMovieDelete, isSavedButton }) {
+function MoviesCardList({
+  movies,
+  onMarkSavedMovie,
+  onMovieDelete,
+  isMainApi,
+}) {
   const [number, setNumber] = React.useState(12);
   const [addMovies, setAddMovies] = React.useState(3);
 
@@ -33,13 +38,16 @@ function MoviesCardList({ movies, onMarkSavedMovie, onMovieDelete, isSavedButton
                 id={movie.id}
                 key={movie.id}
                 savedId={movie.savedId}
+                country={movie.country}
                 duration={movie.duration}
-                image={movie.image?.url || movie.image}
+                image={movie.image?.url}
                 trailerLink={movie.trailerLink}
-                isSavedMovies={movie.isSaved}
+                thumbnail={movie.thumbnail}
                 nameRU={movie.nameRU}
+                isSavedMovies={movie.isSaved}
                 onMovieDelete={onMovieDelete}
                 onMarkSavedMovie={onMarkSavedMovie}
+                isMainApi={isMainApi}
               />
             );
           })}

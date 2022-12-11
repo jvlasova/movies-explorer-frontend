@@ -11,15 +11,13 @@ import { useMovies } from "../../hooks/useMovies";
 function Movies({ loggedIn }) {
   const {
     isPreloader,
-    moviesList,
     isShortMovies,
-    searchValue,
     filteredMovies,
-    handleSearchShort,
+    isMainApi,
+    handleToggleShort,
     handleSubmitSearchForm,
     handleDeleteMovies,
     handleMarkAsSavedMovie,
-    movie,
   } = useMovies();
 
   return (
@@ -27,17 +25,17 @@ function Movies({ loggedIn }) {
       <Header loggedIn={loggedIn} />
       <SearchForm
         onSearch={handleSubmitSearchForm}
-        onToggleSearch={handleSearchShort}
+        onToggleSearch={handleToggleShort}
         isShortMovies={isShortMovies}
-        searchValue={searchValue}
       />
       {isPreloader ? (
         <Preloder />
       ) : (
         <MoviesCardList
-          movies={searchValue ? filteredMovies : moviesList}
+          movies={filteredMovies}
           onMovieDelete={handleDeleteMovies}
           onMarkSavedMovie={handleMarkAsSavedMovie}
+          isMainApi={isMainApi}
         />
       )}
       <Footer />

@@ -62,7 +62,7 @@
 }
 
 .toggle {
-  display: none;
+  appearance: none;
   transition: opacity .4s ease-in-out;
 }
 

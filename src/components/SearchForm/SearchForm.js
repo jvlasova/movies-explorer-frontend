@@ -1,27 +1,32 @@
 import React from "react";
 import "./SearchForm.css";
-import { useFormWithValidation } from "../../hooks/useForm";
 import search_blue from "../../images/seach/seach_blue.svg";
 import search_grey from "../../images/seach/seach_grey.svg";
 
-function SearchForm({ onSearch, isShortMovies, onToggleSearch, searchValue }) {
-  const { values, errors, handleChange } =
-    useFormWithValidation({ initValues: { search: searchValue } });
+function SearchForm({ onSearch, isShortMovies, onToggleSearch }) {
+  const [values, setValues] = React.useState(
+    () => localStorage.getItem("searchValue") || ""
+  );
+  const [error, setError] = React.useState("");
+
+  const handleChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    setValues(value);
+    setError(target.validationMessage);
+    localStorage.setItem("searchValue", value);
+  };
 
   function handleSubmitSearchForm(e) {
     e.preventDefault();
-    if (!values.search) {
-      return ;
+    if (!values) {
+      return;
     }
-    onSearch(values.search);
+    onSearch(values);
   }
 
   return (
-    <form
-      name="search"
-      className="form-search"
-      onSubmit={handleSubmitSearchForm}
-    >
+    <form name="search" className="form-search">
       <div className="form-search__container">
         <img
           className="form-search__image_grey"
@@ -34,7 +39,7 @@ function SearchForm({ onSearch, isShortMovies, onToggleSearch, searchValue }) {
           name="search"
           type="text"
           placeholder="Фильм"
-          value={values.search || ""}
+          value={values || ""}
           onChange={handleChange}
           required
         />
@@ -53,7 +58,7 @@ function SearchForm({ onSearch, isShortMovies, onToggleSearch, searchValue }) {
       </div>
       <span
         className={`input__text-error ${
-          errors.search ? "input__text-error_visible" : ""
+          error ? "input__text-error_visible" : ""
         }`}
       >
         Нужно ввести ключевое слово
@@ -63,12 +68,12 @@ function SearchForm({ onSearch, isShortMovies, onToggleSearch, searchValue }) {
         <input
           type="checkbox"
           name="checkbox"
-          className='toggle'
-          onClick={onToggleSearch}
-          value={!isShortMovies}
+          className="toggle"
+          onChange={onToggleSearch}
+          checked={isShortMovies}
         />
         <span
-          className={`toggle__turn ${!isShortMovies} ? toggle : ''}`}
+          className={`toggle__turn ${isShortMovies ? "toggle" : ""}`}
         ></span>
         <span className="form-search__text">Короткометражки</span>
       </label>

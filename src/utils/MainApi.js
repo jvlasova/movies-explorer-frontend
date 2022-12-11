@@ -1,7 +1,5 @@
-import { BASE_URL_MOVIES } from "./MoviesApi";
-
 //export const BASE_URL_MAIN = "http://localhost:4000";
-export const BASE_URL_MAIN = 'https://api.jvlasova.movies.nomoredomains.icu';
+export const BASE_URL_MAIN = "https://api.jvlasova.movies.nomoredomains.icu";
 
 const handleResponse = (res) => {
   if (res.ok) {
@@ -46,7 +44,6 @@ export const signOut = () => {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-      
     },
     credentials: "include",
   }).then((res) => handleResponse(res));
@@ -102,12 +99,14 @@ export const markSavedMovies = (data) => {
       duration: data.duration,
       year: data.year,
       description: data.description,
-      image: `${BASE_URL_MOVIES}${data.image.url}`,
+      image: data.image,
+      //image: `${BASE_URL_MOVIES}${data.image.url}`,
       trailerLink: data.trailerLink,
-      movieId: data.id,
+      movieId: Date.now(),
       nameRU: data.nameRU,
       nameEN: data.nameEN,
-      thumbnail: `${BASE_URL_MOVIES}${data.image.formats.thumbnail.url}`,
+      thumbnail: data.thumbnail,
+      //thumbnail: `${BASE_URL_MOVIES}${data.image.formats.thumbnail.url}`,
     }),
   }).then((res) => handleResponse(res));
 };
@@ -122,4 +121,3 @@ export const deleteMovie = (id) => {
     credentials: "include",
   }).then((res) => handleResponse(res));
 };
-
