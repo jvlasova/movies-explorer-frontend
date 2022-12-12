@@ -35,8 +35,8 @@ function MoviesCardList({
           {movies.slice(0, number).map((movie) => {
             return (
               <MoviesCard
-                id={movie.id}
-                key={movie.id}
+                id={movie.id || movie._id}
+                key={movie.id || movie._id}
                 savedId={movie.savedId}
                 country={movie.country}
                 duration={movie.duration}

@@ -1,0 +1,42 @@
+import React from "react";
+
+import "./Movies.css";
+import Header from "../Header/Header";
+import SearchForm from "../SearchForm/SearchForm";
+import Preloder from "../Preloader/Preloader";
+import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import Footer from "../Footer/Footer";
+import { useMovies } from "../../hooks/useMovies";
+
+function SavedMovies({ loggedIn }) {
+  const {
+    isPreloader,
+    isShortMovies,
+    filteredSavedMovies,
+    handleToggleShort,
+    handleSubmitSearchForm,
+    handleDeleteMovies,
+  } = useMovies();
+
+  return (
+    <>
+      <Header loggedIn={loggedIn} />
+      <SearchForm
+        onSearch={handleSubmitSearchForm}
+        onToggleSearch={handleToggleShort}
+        isShortMovies={isShortMovies}
+      />
+      {isPreloader ? (
+        <Preloder />
+      ) : (
+        <MoviesCardList
+          movies={filteredSavedMovies}
+          onMovieDelete={handleDeleteMovies}
+        />
+      )}
+      <Footer />
+    </>
+  );
+}
+
+export default SavedMovies;

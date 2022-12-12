@@ -98,7 +98,6 @@ export function useMovies() {
         setSavedMoviesList(list);
         const filteredList = list.filter(filter(searchValue, isShortMovies));
         setFilteredSavedMovies(filteredList);
-        console.log("getSaved movies", movies);
       })
       .catch((err) => {
         console.error(
@@ -150,7 +149,6 @@ export function useMovies() {
         setMovies(newMovies);
         const movList = Object.keys(newMovies).map((id) => newMovies[id]);
         setMoviesList(movList);
-        console.log("newMovies", newMovies);
 
         setFilteredMovies(movList.filter(filter(searchValue, isShortMovies)));
       })
@@ -159,9 +157,8 @@ export function useMovies() {
       });
   }
 
-  function handleDeleteMovies(id) {
-    console.log("handleDeleteMovies", movies);
-    MainApi.deleteMovie(id)
+  function handleDeleteMovies(SavedId) {
+    MainApi.deleteMovie(SavedId)
       .catch((err) => {
         console.error(err);
       })

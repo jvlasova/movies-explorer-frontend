@@ -69,7 +69,6 @@
   }
 
   .footer__container {
-    display: flex;
     flex-direction: column-reverse;
   }
   
@@ -83,10 +82,9 @@
 
   .footer__wrapper {
     margin-top: 30px;
-    display: flex;
     flex-direction: column;
     gap: 12px;
-
+    padding: 0;
   }
 
   .footer__link {

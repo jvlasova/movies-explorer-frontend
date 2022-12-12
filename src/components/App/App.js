@@ -3,6 +3,7 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import { Route, Switch, useHistory, useLocation } from "react-router-dom";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
+import SavedMovies from "../Movies/Movies";
 import Profile from "../Profile/Profile";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
@@ -52,6 +53,7 @@ function App() {
     MainApi.register({ values })
       .then((res) => {
         if (res) {
+          setLoggedIn(true);
           history.push("/movies");
         }
       })
@@ -93,7 +95,7 @@ function App() {
           />
           <ProtectedRoute
             path="/saved-movies"
-            component={Movies}
+            component={SavedMovies}
             loggedIn={loggedIn}
           />
           <ProtectedRoute

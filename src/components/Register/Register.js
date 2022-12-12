@@ -22,7 +22,7 @@ function Register({ onRegister }) {
     <Form 
       name='register' 
       onSubmit={handleSubmit}
-      >
+    >
       <div className='auth__header'>
         <Logo />
         <h1 className='auth__title'>Добро пожаловать!</h1>
@@ -44,6 +44,9 @@ function Register({ onRegister }) {
           maxLength='30'
           pattern='^[A-Za-zА-Яа-яЁё -]+$'
         />
+        <span className={`input__text-error ${errors.name ? 'input__text-error_visible' : ''}`}>
+          Введите минимум два символа
+        </span>
         <label className='auth__input-label' htmlFor='login'>
           Email
         </label>
@@ -60,6 +63,9 @@ function Register({ onRegister }) {
           maxLength='30'
           pattern='^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$'
         />
+        <span className={`input__text-error ${errors.login ? 'input__text-error_visible' : ''}`}>
+          Проверьте правильность введенного email
+        </span>
         <label className='auth__input-label' htmlFor='password'>
           Пароль
         </label>
@@ -75,8 +81,8 @@ function Register({ onRegister }) {
           minLength='2'
           maxLength='30'
         />
-        <span className={`input__text-error ${errors.name || errors.login || errors.password ? 'input__text-error_visible' : ''}`}>
-          Что-то пошло не так...
+        <span className={`input__text-error ${errors.password ? 'input__text-error_visible' : ''}`}>
+          Введите минимум два символа
         </span>
       </div>
       <div className='auth__footer'>
